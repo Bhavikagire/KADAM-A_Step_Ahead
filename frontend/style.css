@@ -9,6 +9,18 @@
 body{
  size: 1vw;
 }
+.bannermedia{
+  display: none;
+}
+#kadam{
+  width: 34%;
+  height: 55px;
+ padding: 5px;
+ padding-left: 20px;
+ background-color: white;
+ color: black;
+ margin: 30px auto 40px 5px;
+}
 #topsecnd{
   display: flex;
   width: 90%;
@@ -81,7 +93,15 @@ body{
    margin: 20px;
  }
  
- 
+ .playstore{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+.playstore img{
+  width: 38%;
+}
 
 /* h2
 
@@ -109,9 +129,31 @@ p */
   width: 100%;
 }
 
+#footbox{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+  background-color: black;
+  color: white;
+  padding-top: 50px;
+ }
 
-
-
+#footbox button{
+  width: auto;
+  padding: 15px;
+  color: white;
+ border-color: white;
+ border-width: 4px;
+  background-color: black;
+  font-size: 20px;
+  margin: 10px auto 20px 10px;
+  
+}
+#footbox p{
+font-size: 20px;
+margin: 10px;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 
 
 
@@ -259,27 +301,100 @@ nav {
     margin: 10px;
     margin-left: 0px;
   }
+  .onlinepayment{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+   
+   }
   @media screen and (max-width: 1100px) {
     .hideinput{
       display: none;
     }
+   
+    .last{
+      gap: 20px;
+    }
     .banner div h1{
       position: absolute;
-      top: 30%;
+      top: 41%;
       left: 2%;
       font-size:20px;
     }
-    
-    
+    #category{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+    }
+    #brandlogos{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+    }
+    #brandlogos img{
+     width: 100%;
+    }
+    #balls{
+      display: grid;
+      grid-template-columns: repeat(1,1fr);
+    }
+    #shoes{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+    }
+    #topsecnd{
+      display: grid;
+      grid-template-columns: repeat(1,1fr);
+    }
+    /* .bannersecound img{
+      width: 50%;
+
+    } */
+   
+    .bannermedia {
+      
+      margin-top: 30px;
+      display: grid;
+      justify-content: center;
+    }
+    .bannermedia img{
+      width: 90%;
+      margin: auto;
+    }
+    .bannermedia h1{
+      margin-top: 20px;
+      font-size: 55px;
+      display: flex;
+      justify-content: center;
+    }
+    .bannermedia p{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      font-size: 28px;
+      margin: 10px;
+    }
+    .bannermedia button{
+      display: flex;
+      justify-content: center;
+      width: 80%;
+      height: 50px;
+      background-color: black;
+      color: white;
+      align-items: center;
+      margin: 20px auto 30px auto;
+      font-size: 20px;
+      
+    }
+    .bannersecound{
+      display: none;
+    }
     .banner div p{
       position: absolute;
-      top: 35%;
+      top: 44%;
       left: 1%;
       font-size:11px;
     }
     .banner div button{
       position: absolute;
-      top: 38%;
+      top: 46%;
       left:2%;
       font-size: 11px;
       width:16%;
@@ -289,8 +404,41 @@ nav {
       border-radius: 4px;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-   
-
+    #footbox{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    #footbox div{
+     width: 50%;
+     margin: auto;
+     
+    }
+    #footbox button{
+      width: 90%;
+    
+      
+     }
+     .onlinepayment{
+      display: grid;
+      grid-template-columns: repeat(5,1fr);
+     
+     }
+   #style{
+    display: grid;
+      grid-template-columns: repeat(1,1fr);
+   }
+   #style div{
+   width: 80%;
+   margin: auto;
+   margin-bottom: 50px;
+   }
+   #style h2{
+    font-size: 30px;
+   }
+   #style p{
+    font-size: 20px;
+   }
 
     .nav-links {
       position: absolute;
@@ -305,8 +453,8 @@ nav {
       transform: translateX(100%);
       transition: transform 0.5s ease-in;
     }
-    .search-container {
-   
+    #kadam{
+      width: 50%;
     }
     .nav-links li {
       opacity: 0;
@@ -316,7 +464,7 @@ nav {
       display: block;
      margin-left: 140px;
     }
-  }
+   
   
   .nav-active {
     transform: translateX(0%);
@@ -351,7 +499,13 @@ nav {
     }
   }
 
-  
+  .playstore img{
+    margin-top: 20px;
+    width: 100%;
+    margin-bottom: 10px;
+        }
+       
+}
 /* Style the search container */
 .search-container {
   position: relative;
@@ -395,22 +549,7 @@ nav {
 .flex{
   display: flex;
 }
-#footbox button{
-  width: auto;
-  padding: 15px;
-  color: white;
- border-color: white;
- border-width: 4px;
-  background-color: black;
-  font-size: 20px;
-  margin: 10px auto 20px 10px;
-  
-}
-#footbox p{
-font-size: 20px;
-margin: 10px;
-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
+
 /* Style the Font Awesome icon */
 .search-container button[type="submit"] i {
   font-size: 24px;
@@ -425,24 +564,8 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 .last img{
  width: 200px;
 } 
-#kadam{
-  width: 34%;
-  height: 55px;
- padding: 5px;
- padding-left: 20px;
- background-color: white;
- color: black;
- margin: 30px auto 40px 5px;
-}
-.playstore{
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin-top: 20px;
-}
-.playstore img{
-  width: 38%;
-}
+
+
 
 .onlinepayment img{
 width: 60px;
@@ -455,14 +578,7 @@ margin: 5px;
    justify-content: center;
    text-decoration: underline;
  }
- #footbox{
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 30px;
-  background-color: black;
-  color: white;
-  padding-top: 50px;
- }
+ 
  
 
   
