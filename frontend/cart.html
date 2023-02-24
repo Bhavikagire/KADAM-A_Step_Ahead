@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KADAM</title>
+    <title>CART</title>
 
     <link rel="stylesheet" href="style.css">
     <!-- <link rel="stylesheet" href="product.css"> -->
@@ -292,147 +292,16 @@ width: auto;
     </header>
 
     <div id="body" class="flex">
-        <div id="leftbox">
-            <div class="flex">
-                <span>Home</span>
-                <p>>New Arrivals</p>
-            </div>
-            <h1 class="newarr">New Arrivals</h1>
-            <h4>showing result </h4>
-            <h2>Refine Results</h2>
-            <div class="flex" id="checklocation">
-                <input type="checkbox">
-                <p>Pick up in Store</p>
-
-                <a href="https://goo.gl/maps/DD8kbF8M4L3QG8q67" target="_blank"> <ion-icon name="location"></ion-icon></a>
-
-
-                
-               
-            </div>
-
-
-
-            <div id="catfilter">
-                <div>
-                    <button id="button1">GENDER<ion-icon name="add-outline"></ion-icon></button>
-                    <ul id="subItems1" style="display:none" class="subItems">
-                        <li>Men's</li>
-                        <li>Women's</li>
-                        <li>Boys'</li>
-                        <li>Girls'</li>
-                    </ul>
-
-                </div>
-                <div>
-                    <button id="button2">AGE RANGE<ion-icon name="add-outline"></ion-icon></button>
-                    <ul id="subItems2" style="display:none" class="subItems">
-                        <li>Grade School</li>
-                        <li>Preschool</li>
-                        <li>Toddler</li>
-                        <li>Infant</li>
-                    </ul>
-
-                </div>
-                <!-- <div>
-                    <button id="button3">PRODUCT TYPE<ion-icon name="add-outline"></ion-icon></button>
-                    <ul id="subItems3" style="display:none" class="subItems">
-                        <li>Shoes</li>
-                        <li>Clothing</li>
-                        <li>Accessories</li>
-                    </ul>
-                </div> -->
-                <div>
-                    <button id="button4">BRAND<ion-icon name="add-outline"></ion-icon></button>
-                    <ul id="subItems4" style="display:none" class="subItems">
-
-                        <LI>289c Apparel</LI>
-                        <LI>47 Brand</LI>
-                        <LI>adidas</LI>
-                        <LI>adidas Originals</LI>
-                        <LI> Alta Gracia</LI>
-                        <LI> Alternative Apparel</LI>
-                        <LI>Antigua</LI>
-                        <LI>ASICS®</LI>
-                        <LI>Aware Brand</LI>
-                        <li>Bimm Rider Sportswear</li>
-
-                    </ul>
-                </div>
-                <div>
-                    <button id="button5">SPORTS<ion-icon name="add-outline"></ion-icon></button>
-                    <ul id="subItems5" style="display:none" class="subItems">
-                        <li>Baseball</li>
-                        <li>Basketball</li>
-                        <li>Casual</li>
-                        <li>Football</li>
-                        <li>For All Sports</li>
-                        <li>Golf</li>
-                        <li>Running</li>
-                        <li>Skate</li>
-                        <li>Soccer</li>
-                    
-                    </ul>
-                </div>
-                <div>
-                    <button id="button6">LEAGUE<ion-icon name="add-outline"></ion-icon></button>
-                    <ul id="subItems6" style="display:none" class="subItems">
-                        <li>MLB</li>
-                        <li>NBA</li>
-                        <li>NCAA</li>
-                        <li>NFL</li>
-                        <li>NHL</li>
-
-                        
-                    </ul>
-                </div>
-                <div>
-                    <button id="button7">COLOR<ion-icon name="add-outline"></ion-icon></button>
-                    <ul id="subItems7" style="display:none" class="subItems">
-                        <li>Black</li>
-                        <li>Blue</li>
-                        <li>Brown</li>
-                        <li>Gold</li>
-                        <li>Green</li>
-                        <li>Grey</li>
-
-                    </ul>
-                </div>
-                <div>
-                    <button id="button8">PRICE<ion-icon name="add-outline"></ion-icon></button>
-                    <ul id="subItems8" style="display:none" class="subItems">
-                        <li id="priceone">$24 to $49.99</li>
-                        <li id="pricetwo">$50 to $299.99</li>
-                        <li id="pricethree">$299 to $499.99</li>
-                        <li id="pricefour">Above $500</li>
-
-                    </ul>
-                </div>
-                <div>
-                    <div> <input type="checkbox">SALE</div>
-                    <div> <input type="checkbox">NEW ARRIVALS</div>
-                    <div><input type="checkbox">FREE SHIPING</div>
-
-
-                </div>
-            </div>
-        </div>
-        <div>
-            <div class="sortinput">
-                <p>Sort by Price</p>
- 
-                 <select name="" id="sort">
-                     <option value="">Initial Result</option>
-                     <option value="htl">High to low</option>
-                     <option value="ltl">low to High</option>
-                 </select>
-             </div>
+      
+        <H1>
+            MY CART
+        </H1>
           
             <div id="append">
             
 
             </div>
-        </div>
+        
        
     </div>
 
@@ -557,8 +426,8 @@ width: auto;
 </body>
 
 </html>
-<script src="product.js"></script>
-
+<!-- <script src="product.js"></script>
+ -->
 
 <script>
 const hamburger = document.querySelector('.hamburger');
@@ -583,30 +452,4 @@ hamburger.addEventListener('click', () => {
 });
 
 
-
-
-
-    function createButtonHandler(buttonId, subItemsId) {
-        const button = document.getElementById(buttonId);
-        const subItems = document.getElementById(subItemsId);
-
-        button.addEventListener("click", function () {
-            if (subItems.style.display === "none") {
-                subItems.style.display = "block";
-               
-            } else {
-                subItems.style.display = "none";
-               
-            }
-        });
-    }
-
-    createButtonHandler("button1", "subItems1");
-    createButtonHandler("button2", "subItems2");
-  
-    createButtonHandler("button4", "subItems4");
-    createButtonHandler("button5", "subItems5");
-    createButtonHandler("button6", "subItems6");
-    createButtonHandler("button7", "subItems7");
-    createButtonHandler("button8", "subItems8");
 </script>

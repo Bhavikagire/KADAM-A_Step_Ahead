@@ -1,4 +1,4 @@
-console.log("hii")
+// console.log("hii")
  let data = []
 fetch('http://localhost:8000/product')
     .then((res) => res.json())
@@ -71,9 +71,9 @@ function displaydata(data) {
 
         })
         
-        // let addcart = document.createElement("button")
-        // addcart.innerText = "Add To Cart"
-        // addcart.setAttribute("id", "addcart")
+        let addcart = document.createElement("button")
+        addcart.innerText = "Add To Cart"
+        addcart.setAttribute("id", "addcart")
         // addcart.addEventListener("click", function () {
         //     let cartitemmyntra = JSON.parse(localStorage.getItem("myntracart"))
         //     if (cartitemmyntra == null)
@@ -96,7 +96,21 @@ function displaydata(data) {
         //     }
         // })
 
-        div.append(newbt,wish,image, productname, rating, price)
+
+
+
+addcart.addEventListener("click", function () {
+           
+            let alreadyct = false;
+            for (let i = 0; i < cartitemmyntra.length; i++) {
+
+            }
+           
+           
+        })
+
+
+        div.append(newbt,wish,image, productname, rating, price,addcart)
         document.querySelector("#append").append(div)
 
 
@@ -144,3 +158,58 @@ document.querySelector("select").addEventListener("change",function(){
       displaydata(newdata)
     
     })
+
+
+
+     document.querySelector("#priceone").addEventListener("click", function () {
+
+        let filterdproduct = data.filter(function (el) {
+            
+            if(el.price<49){
+                return el
+            }   
+        })
+        displaydata(filterdproduct)
+    
+    })
+
+    document.querySelector("#pricetwo").addEventListener("click", function () {
+
+        let filterdproduct = data.filter(function (el) {
+            
+            if(el.price>49 && el.price<299.99){
+                return el
+            }   
+        })
+        displaydata(filterdproduct)
+    
+    })
+
+    document.querySelector("#pricethree").addEventListener("click", function () {
+
+        let filterdproduct = data.filter(function (el) {
+            
+            if(el.price>299.99 && el.price<499.99){
+                return el
+            }   
+        })
+        displaydata(filterdproduct)
+    
+    })
+
+  
+    document.querySelector("#pricethree").addEventListener("click", function () {
+
+        let filterdproduct = data.filter(function (el) {
+            
+            if(el.price>500){
+                return el
+            }   
+        })
+        displaydata(filterdproduct)
+    
+    })
+
+   
+
+
