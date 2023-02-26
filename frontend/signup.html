@@ -163,15 +163,15 @@
         <option value="female">Female</option>
         <option value="other">Other</option>
       </select>
-    </form>
+   
     
 
     <h2 style="margin-top: 20px; margin-bottom: 20px;">Account Information</h2>
-    <form>
+   
       <input id="email"  type="email" name="email" placeholder="Email Address" required>
       <input id="password"  type="password" name="password" placeholder="Password" required>
       <input id="mobilenumber"  type="number" name="mobile_number" placeholder="Mobile Number" required>
-      <input   onclick="onsignup()" type="submit" value="Sign Up">
+      <input type="submit" value="Sign Up">
     </form>
     
     <p>Already have an account? <a href="login.html">Login here</a></p>
@@ -210,35 +210,7 @@ hamburger.classList.toggle('toggle');
     
     form.addEventListener('submit', (event) => {
       event.preventDefault();
-      const nameValue = nameInput.value.trim();
-      const emailValue = emailInput.value.trim();
-      const passwordValue = passwordInput.value.trim();
       
-      if (nameValue === '') {
-        alert('Please enter your name.');
-        nameInput.focus();
-        return;
-      }
-      
-      if (emailValue === '') {
-        alert('Please enter your email.');
-        emailInput.focus();
-        return;
-      }
-      
-      if (passwordValue === '') {
-        alert('Please enter your password.');
-        passwordInput.focus();
-        return;
-      }
-      
-      alert(`Thank you for log in, ${nameValue}!`);
-      form.reset();
-    });
-
-
-
-  const onsignup = ()=>{
     var firstname=document.getElementById("firstname").value
    const payload = {
        firstname:document.getElementById("firstname").value,
@@ -266,8 +238,12 @@ hamburger.classList.toggle('toggle');
    console.log(res))
    .catch(res=>console.log(res))
    
-   alert(`Thank you for register, ${firstname}!`);
-      form.reset();
-     
-  }
+      alert("thakyou for register")
+      window.location.assign("./login.html")
+  
+    });
+
+
+
+  
 </script> 

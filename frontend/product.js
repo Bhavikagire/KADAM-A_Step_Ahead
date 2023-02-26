@@ -10,7 +10,7 @@ fetch('http://localhost:8000/product')
     .catch((err) => console.log(err))
 
 
-function displaydata(data) {
+   function displaydata(data) {
     
 
     document.querySelector("#append").innerHTML = null
@@ -74,40 +74,28 @@ function displaydata(data) {
         let addcart = document.createElement("button")
         addcart.innerText = "Add To Cart"
         addcart.setAttribute("id", "addcart")
-        // addcart.addEventListener("click", function () {
-        //     let cartitemmyntra = JSON.parse(localStorage.getItem("myntracart"))
-        //     if (cartitemmyntra == null)
-        //         cartitemmyntra = []
-        //     let alreadyct = false;
-        //     for (let i = 0; i < cartitemmyntra.length; i++) {
-        //         if (cartitemmyntra[i].links == el.links) {
-        //             alreadyct = true
-        //         }
-        //     }
-        //     if (alreadyct == true) {
-        //         alert("product already in cart")
-        //     }
-        //     else {
-        //         cartitemmyntra.push({ ...el, qty: 1 })
-        //         localStorage.setItem("myntracart", JSON.stringify(cartitemmyntra))
-        //         alert("product added to cart")
-        //         addcart.innerText = "In Cart"
-        //         localStorage.setItem("myntracart", JSON.stringify(cartitemmyntra))
-        //     }
-        // })
 
 
-
-
-addcart.addEventListener("click", function () {
+        addcart.addEventListener("click", function () {
+            const payload={ image:el.image,tital:el.tital,price:el.price}
            
-            let alreadyct = false;
-            for (let i = 0; i < cartitemmyntra.length; i++) {
-
-            }
+              try {
+                fetch("http://localhost:8000/cartadd",{
+                    method:"POST",
+                    headers:{
+                        "content-Type":"application/json"},
+                       body: JSON.stringify(payload)
+                    
+                })
+                alert("product added to cart")
+              } catch (error) {
+                console.log(error)
+              }
            
-           
+            
         })
+
+
 
 
         div.append(newbt,wish,image, productname, rating, price,addcart)
@@ -211,5 +199,7 @@ document.querySelector("select").addEventListener("change",function(){
     })
 
    
-
+module.exports={
+    displaydata
+}
 
