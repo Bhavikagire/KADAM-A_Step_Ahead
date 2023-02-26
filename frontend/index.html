@@ -17,7 +17,7 @@
         <div id="top">
             <h3>Find a Store <img id="arrow" src="https://tse1.mm.bing.net/th?id=OIP.2bYrkiqsIIjXgzU76_YtLAHaEP&pid=Api&rs=1&c=1&qlt=95&w=184&h=105" alt="">
             </h3>
-                <h3> Welcome, Sign In </h3>
+                <h3 id="signup"> Welcome, Sign Up </h3>
                     <h3>Customer Service</h3>
             
            
@@ -32,7 +32,7 @@
             
             <ul class="nav-links">
                 <li class="">
-                    <a href="#" class="active">
+                    <a href="#" class="active" id="newarrivals">
                         NEW ARRIVALS
                     </a>
                 </li>
@@ -79,11 +79,18 @@
                 </li>
             </ul>
 
-            <div class="search-container">
-                <input class="hideinput" type="text" placeholder="Search...">
+            <div class="search-container flex">
+               <div> <input class="hideinput" type="text" placeholder="Search..." id="searchproducts">
                 <button class="hideinput"  type="submit"><i class="fa fa-search"> </i><img id="magnify"  src="https://tse1.mm.bing.net/th?id=OIP.1MH3JofIYhNGZSPQt8sbvAHaHa&pid=Api&rs=1&c=1&qlt=95&w=121&h=121" alt=""></button>
-                <ion-icon name="heart-outline"></ion-icon>
-                <ion-icon name="cart-outline"></ion-icon>
+               </div>
+
+
+
+
+                <div style="font-size: 30px;">
+                    <ion-icon name="heart-outline"></ion-icon>
+                    <ion-icon id="cartpage" name="cart-outline"></ion-icon>
+                </div>
             </div>
             <div class="hamburger">
                 <div class="line"></div>
@@ -361,6 +368,48 @@ hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('toggle');
 });
 
+</script>
+
+
+<script>
+
+    let newarbtn = document.getElementById("newarrivals").addEventListener("click",()=>{
+window.location.assign("./product.html")
+    })
+
+
+    const cartpage = document.getElementById("cartpage")
+    cartpage.addEventListener("click",()=>{
+        window.location.assign("./cart.html")
+    })
+
+    const signup = document.getElementById("signup")
+    signup.addEventListener("click",()=>{
+        window.location.assign("./signup.html")
+    })
+
+
+
+
+    
+ document.querySelector("#searchproducts").addEventListener("input",function(){
+     let q = document.querySelector("#searchproducts").value
+     console.log(q)
+     let newdata = data.filter(function(el){
+        return el.tital.toLowerCase().includes(q.toLowerCase())
+        if(document.querySelector("#searchproducts").value == ""){
+            window.location.reload
+         }
+
+     })
+     
+    //  console.log(newdata)
+      displaydata(newdata)
+    
+    })
+
+
+    
 </script>
 
 

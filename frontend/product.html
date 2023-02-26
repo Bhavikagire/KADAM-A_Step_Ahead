@@ -273,14 +273,33 @@ width: auto;
                 </li>
             </ul>
 
-            <div class="search-container">
+            <div class="search-container flex">
+                <div>
                 <input class="hideinput" type="text" placeholder="Search..." id="searchproducts">
                 <button class="hideinput" type="submit"><i class="fa fa-search"> </i><img id="magnify"
                         src="https://tse1.mm.bing.net/th?id=OIP.1MH3JofIYhNGZSPQt8sbvAHaHa&pid=Api&rs=1&c=1&qlt=95&w=121&h=121"
                         alt=""></button>
+                    </div>
+                    <div style="font-size: 30px;">
                 <ion-icon name="heart-outline"></ion-icon>
-                <ion-icon name="cart-outline"></ion-icon>
+                <ion-icon id="cartpage" name="cart-outline"></ion-icon>
             </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <div class="hamburger">
                 <div class="line"></div>
                 <div class="line"></div>
@@ -609,4 +628,10 @@ hamburger.addEventListener('click', () => {
     createButtonHandler("button6", "subItems6");
     createButtonHandler("button7", "subItems7");
     createButtonHandler("button8", "subItems8");
+
+
+    const cartpage = document.getElementById("cartpage")
+    cartpage.addEventListener("click",()=>{
+        window.location.assign("./cart.html")
+    })
 </script>
