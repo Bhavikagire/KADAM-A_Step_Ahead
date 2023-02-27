@@ -38,6 +38,14 @@ h.all product available page
  b.filter product by their prices
  c.sort products by price
  
+ 5. folders-
+  a. backend
+       for backend i used mongo express JSON 
+       for data store i used mongo db Atlas
+  b. frontend
+        for text i used html
+        for style i only used css
+ 
  about project-
  This is a clone of FootLocker. It is a individual project.
  
