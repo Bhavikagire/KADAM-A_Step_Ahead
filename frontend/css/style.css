@@ -27,42 +27,49 @@ body{
  margin: auto;
 }
 .banner div h1{
-  position: absolute;
-  top: 350px;
   left: 30px;
-  font-size: 60px;
+  font-size: 2rem;
 }
 
+.banner{
+  width: 100%;
+  display: flex;
+  margin-left: 5%;
+}
+.banner-child1{
+margin-right: 10%;
+width: 40%;
+}
 
 .banner div p{
-  position: absolute;
-  top: 430px;
+
   left: 30px;
-  font-size: 30px;
+  font-size: 1rem;
 }
 .banner div button{
-  position: absolute;
-  top: 500px;
-  left: 30px;
-  font-size: 20px;
-  width: 300px;
+
+  font-size: 1rem;
+  width: 50%;
   height: 50px;
   color: white;
   background-color: #0e1111;
   border-radius: 4px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.banner img{
-  width: 100%;
+.bannersecound img{
+  margin-top: 2%;
+}
+.bannersecound {
+text-align: center;
+}
+.bannersecound p{
+  font-size: 1rem;
+}
+.bannersecound h4{
+  font-size: 1.5rem;
+  margin: 1% auto;
 }
 
-
-.bannersecound div h1{
-  position: absolute;
-  top: 2400px;
-  left: 30px;
-  font-size: 65px;
-}
 #style{
   display: flex;
   justify-content: space-evenly;
@@ -103,31 +110,9 @@ body{
   width: 38%;
 }
 
-/* h2
 
-p */
 
-.bannersecound div p{
-  position: absolute;
-  top: 2500px;
-  left: 30px;
-  font-size: 25px;
-}
-.bannersecound div button{
-  position: absolute;
-  top: 2560px;
-  left: 30px;
-  font-size: 20px;
-  width: 300px;
-  height: 50px;
-  color: white;
-  background-color: #0e1111;
-  border-radius: 4px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.bannersecound img{
-  width: 100%;
-}
+
 
 #footbox{
   display: flex;
@@ -307,6 +292,12 @@ nav {
    
    }
   @media screen and (max-width: 1100px) {
+    .banner{
+      display: flex;
+      flex-direction: column;
+   
+    }
+    
     .hideinput{
       display: none;
     }
@@ -315,9 +306,7 @@ nav {
       gap: 20px;
     }
     .banner div h1{
-      position: absolute;
-      top: 41%;
-      left: 2%;
+    margin: 1%;
       font-size:20px;
     }
     #category{
@@ -343,11 +332,7 @@ nav {
       display: grid;
       grid-template-columns: repeat(1,1fr);
     }
-    /* .bannersecound img{
-      width: 50%;
-
-    } */
-   
+  
     .bannermedia {
       
       margin-top: 30px;
@@ -359,7 +344,7 @@ nav {
       margin: auto;
     }
     .bannermedia h1{
-      margin-top: 20px;
+      margin: 1%;
       font-size: 55px;
       display: flex;
       justify-content: center;
@@ -383,19 +368,13 @@ nav {
       font-size: 20px;
       
     }
-    .bannersecound{
-      display: none;
-    }
+   
     .banner div p{
-      position: absolute;
-      top: 44%;
-      left: 1%;
+     margin: 1%;
       font-size:11px;
     }
     .banner div button{
-      position: absolute;
-      top: 46%;
-      left:2%;
+      margin: 1%;
       font-size: 11px;
       width:16%;
       height: 30px;
@@ -578,7 +557,32 @@ margin: 5px;
    justify-content: center;
    text-decoration: underline;
  }
- 
- 
+ body {
+  size: 100vw;
+  overflow-x: hidden; /* Hide horizontal overflow */
+}
 
-  
+::-webkit-scrollbar {
+  width: 20px; /* Width of the scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Color of the track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scroll handle */
+  border-radius: 6px; /* Rounded corners */
+  border: 3px solid #f1f1f1; /* Border around the handle */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Color of the scroll handle on hover */
+}
+
+
+
+
