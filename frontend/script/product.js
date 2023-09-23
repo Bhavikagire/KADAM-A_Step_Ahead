@@ -1,6 +1,6 @@
 // console.log("hii")
  let data = []
-fetch('http://localhost:8000/product')
+fetch('https://drab-tan-fish-wear.cyclic.app/'+'/product')
     .then((res) => res.json())
     .then((res) => {
         
